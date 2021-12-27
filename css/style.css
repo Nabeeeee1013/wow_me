@@ -1,0 +1,247 @@
+@charset "utf-8";
+
+/* Reset CSS */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+ul, ol {
+	list-style: none;
+}
+table {
+	width: 100%;
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+img {
+	vertical-align: middle; 
+	border: none;
+}
+a {
+	text-decoration: none;
+	color: #666;
+}
+
+/* 세진이가 알려준 css */
+
+#a2:hover {
+    border-bottom: 1px dashed;
+    color: #e9967a;
+}
+
+/* Common CSS */
+body {
+	/* font-family: Arial Helvetica, "돋움", Dotum, sans-serif;  */
+	background-color: #fff;
+	color: #666;
+	font-size: 16px;
+}
+.wrapper {
+	margin: 0 auto;
+	width: 960px;
+	height: 1200px;
+}
+#header {
+	height: 200px;
+	/* border: 1px solid #09f; */
+}
+#header .logo {
+	float: left;
+	margin: 36px 0 0 30px;
+}
+#header .logo img {
+	width: 250px;
+}
+#header .menu {
+	float: right;
+	margin: 40px 0 10px 0;
+}
+#gnb > ul > li {
+	display: inline-block;
+	position: relative;
+	padding: 30px 0;
+}
+#gnb > ul > li > a {
+	display: block;
+	padding: 10px 40px;
+	font-size: 19px;
+}
+#gnb > ul > li:hover > a,
+#gnb > ul > li.active > a {
+	color: darksalmon;
+}
+#gnb ul ul {
+	display: none;
+	position: absolute;
+	top: 80px;
+	z-index: 1;
+	padding: 8px 0;
+	width: 100%;
+	background-color: #f4f4f4;
+}
+#gnb ul ul a {
+	display: block;
+	line-height: 30px;
+	text-align: center;
+	font-size: 14px;
+}
+#gnb ul ul a:hover,
+#gnb ul ul a:focus {
+	background-color:darksalmon;
+	color: #fff;
+}
+.main_image {
+	position: relative;
+	height: 350px;
+	/* border: 1px solid #09f; */
+}
+.main_image .title {
+	position: absolute;
+	left: 0;
+	top: 42%;
+	z-index: 2;
+	width: 100%;
+}
+.main_image .title h2 {
+	text-align: center;
+	font-size: 30px;
+	font-weight: normal;
+	color: #181818;
+}
+.main_image .image {
+	position: relative;
+	width: 960px;
+	height: 350px;
+	overflow: hidden;
+}
+.main_image .image ul {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 5760px; /* 960*6 */
+	height: 350px;
+}
+.main_image .image li {
+	float: left;
+	width: 960px;
+	height: 350px;
+}
+.main_image .image img {
+	max-width: 100%;
+}
+#contents {
+	height: 500px;
+	/* border: 1px solid #09f; */
+}
+#contents .up {
+	height: 280px;
+	/* border: 1px solid #09f; */
+}
+#contents .up .notice {
+	float: left;
+	margin-top: 20px;
+	width: 500px;
+	/* border: 1px solid #09f; */
+}
+#contents .up .notice h3 {
+	font-size: 17px;
+	color: darksalmon;
+}
+#contents .up .notice .table1 table {
+	margin-top: 20px;
+}
+#contents .up .notice .table1 th,
+#contents .up .notice .table1 td {
+	padding: 5px;
+	line-height: 1.5;
+	font-size: 15px;
+	border-bottom: 1px solid #f4f4f4;
+}
+#contents .up .notice .table1 td.date {
+	text-align: right;
+	font-size: 14px;
+	color: #ccc;
+}
+#contents .up .partner {
+	float: right;
+	margin-top: 20px;
+	width: 430px;
+	/* border: 1px solid #09f; */
+}
+#contents .up .partner h3 {
+	font-size: 17px;
+	color: darksalmon;
+}
+#contents .up .partner li {
+	margin-top: 30px;
+	text-align: center;
+}
+#contents .down .banner {
+	margin-top: 20px;
+	text-align: center;
+}
+#contents .down .banner h3 {
+	font-size: 17px;
+	color: darksalmon;
+}
+#contents .down .banner ul li {
+	display: inline-block;
+	margin: 25px 40px 0 40px;
+	width: 200px;
+	height: 120px;
+	line-height: 130px;
+	border: 1px solid #009688;
+}
+#footer {
+	padding: 25px 40px;
+	height: 150px;
+	background-color:darksalmon;
+}
+#footer .top ul li {
+	display: inline-block;
+	margin-right: 10px;
+}
+#footer .top ul li a {
+	font-size: 15px;
+	font-weight: bold;
+	color: #fff;
+}
+#footer .bottom {
+	margin-top: 20px;
+	line-height: 1.5;
+	font-size: 13px;
+	color: #fff;
+}
+#footer .bottom a {
+	color: #fff;
+}
+.wrap {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+
+
+
+/* 내가 추가한 css */
+
+.parent {
+    height: 1em; /* 애니메이션 높이 */
+    overflow-y: hidden;
+    display: block;
+    color: #e9967a;
+}
+.parent .child {
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 1;
+    animation-name: grow;
+    animation-duration: 1s;/* 애니메이션 시간 */
+}
+/* 키프레임 애니메이션 */
+@keyframes grow {
+    from { transform: translateY(3em) }/* 애니메이션 높이 */
+    to { transform: translateY(0) }
+}
